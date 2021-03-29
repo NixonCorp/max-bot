@@ -1,0 +1,38 @@
+.start-page-container{
+  background-image: url('/assets/images/home_screen.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: calc(var(--vh,1vh) * 100);
+  -ms-flex-direction: column;
+  flex-direction: column;
+  //padding: 10px;
+  height: 100%;
+  & h1{
+    font-size: 2.125rem!important;
+  }
+  &__content{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+  }
+  &__content-txt{
+    color: rgb(0, 0, 0);
+  }
+  &__start-btn{
+    background-color: rgb(90, 153, 214);
+    color: rgb(255, 255, 255);
+    min-width: 78px;
+    padding: 16px 37px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+}

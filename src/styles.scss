@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+$assets_url: '/assets/images/';
+
 body {
   margin: 0;
   padding: 0;
@@ -44,7 +46,7 @@ img{
   height: auto;
   vertical-align: middle;
 }
-@media(min - width: 480 px) {
+@media(min-width: 480px) {
   .plyr__captions {
     font-size: 15px;
     font-size: var (--plyr - font - size - base, 15px);
@@ -53,7 +55,7 @@ img{
   }
 }
 
-@media(min - width: 768 px) {
+@media(min-width: 768px) {
   .plyr__captions {
     font-size: 18px;
     font-size: var(--plyr-font-size-large, 18px);
@@ -66,21 +68,21 @@ img{
   }
 }
 
-@media(min - width: 480 px) {
+@media(min-width: 480px) {
   .plyr--video.plyr__controls {
     padding: 10px;
-    padding: var(--plyr - control - spacing, 10px);
+    padding: var(--plyr-control-spacing, 10px);
     padding-top: calc(10px * 3.5);
     padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5);
   }
 }
-@media screen and(max - width: 1280 px) {
+@media screen and(max-width: 1280px) {
   html {
     font-size: 16px;
   }
 }
 
-@media screen and(max - width: 768 px) {
+@media screen and(max-width: 768px) {
   html {
     font-size: 15px;
   }
@@ -97,7 +99,7 @@ img{
 .ql-emojiblot{vertical-align:text-top}
 
 .ap {
-  background-image: url('assets/images/spritekit.png');
+  background-image: url($assets_url + 'spritekit.png');
   background-repeat: no-repeat;
   background-size: 820px;
   box-sizing: border-box;

@@ -4,29 +4,35 @@
 
       <div class="questionnaire-container__list-item" *ngFor="let questionItem of currentQuestionnaireList">
 
-        <img [src]="questionItem.src" alt="" *ngIf="!questionItem.avatar && questionItem.type === 'image'" [style]="questionItem.style">
+        <img [src]="questionItem.src" alt="" *ngIf="!questionItem.avatar && questionItem.type === 'image'"
+             [style]="questionItem.style">
 
-        <div class="questionnaire-container__image-type-row" *ngIf="questionItem.avatar && questionItem.type === 'image'">
+        <div class="questionnaire-container__image-type-row"
+             *ngIf="questionItem.avatar && questionItem.type === 'image'">
           <div class="questionnaire-container__avatar-img-container">
-            <img src="assets/images/avatar.jpeg" alt="" class="questionnaire-container__avatar-img">
+            <img alt="" class="questionnaire-container__avatar-img">
           </div>
-          <img [src]="questionItem.src" class="questionnaire-container__image has-avatar" alt="" [style]="questionItem.style">
+          <img [src]="questionItem.src" class="questionnaire-container__image has-avatar" alt=""
+               [style]="questionItem.style">
         </div>
 
-<!--        <div class="questionnaire-container__audio-type-row" *ngIf="!questionItem.avatar && questionItem.type === 'audio'">-->
-<!--          <div plyr plyrType="audio" [plyrPlaysInline]="true" (plyrReady)="ready()"-->
-<!--               [plyrSources]="questionItem.src"></div>-->
-<!--        </div>-->
+                <div class="questionnaire-container__audio-type-row" *ngIf="!questionItem.avatar && questionItem.type === 'audio'">
+                  <div plyr plyrType="audio" [plyrPlaysInline]="true" (plyrEnded)="plyrEnded()" (plyrReady)="plyrReady()"
+                       [plyrSources]="questionItem.src" class="questionnaire-container__audio"></div>
+                </div>
 
-        <div class="questionnaire-container__audio-type-row" *ngIf="questionItem.avatar && questionItem.type === 'audio'">
+        <div class="questionnaire-container__audio-type-row"
+             *ngIf="questionItem.avatar && questionItem.type === 'audio'">
           <div class="questionnaire-container__avatar-img-container">
-            <img src="assets/images/avatar.jpeg" alt="" class="questionnaire-container__avatar-img">
+            <img alt="" class="questionnaire-container__avatar-img">
           </div>
           <div plyr plyrType="audio" [plyrPlaysInline]="true"
-               [plyrSources]="questionItem.src" (plyrEnded)="plyrEnded()" (plyrReady)="plyrReady()" class="questionnaire-container__audio has-avatar"></div>
+               [plyrSources]="questionItem.src" (plyrEnded)="plyrEnded()" (plyrReady)="plyrReady()"
+               class="questionnaire-container__audio has-avatar"></div>
         </div>
 
-        <div class="questionnaire-container__text-type-row" *ngIf="!questionItem.avatar && questionItem.type === 'text'">
+        <div class="questionnaire-container__text-type-row"
+             *ngIf="!questionItem.avatar && questionItem.type === 'text'">
           <div class="questionnaire-container__text-type-container">
             <div class="questionnaire-container__text-type-content">
               <p *ngFor="let questionItemText of questionItem.src" [innerHTML]="questionItemText"></p>
@@ -36,7 +42,7 @@
 
         <div class="questionnaire-container__text-type-row" *ngIf="questionItem.avatar && questionItem.type === 'text'">
           <div class="questionnaire-container__avatar-img-container">
-            <img src="assets/images/avatar.jpeg" alt="" class="questionnaire-container__avatar-img">
+            <img alt="" class="questionnaire-container__avatar-img">
           </div>
           <div class="questionnaire-container__text-type-container">
             <div class="left-arrow"></div>
@@ -45,13 +51,21 @@
             </div>
           </div>
         </div>
+        <div class="questionnaire-container__user" *ngIf="questionItem.type === 'userAnswer'">
+          <div class="questionnaire-container__user-message" style="background: rgb(101, 162, 220);">
+            <div class="right-arrow"
+                 style="border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(101, 162, 220) rgb(101, 162, 220);">
+            </div>
+            <p class="questionnaire-container__user-text" style="color: rgb(255, 255, 255);">{{questionItem.src}}</p>
+          </div>
+        </div>
 
 
       </div>
 
       <div class="print" *ngIf="isPrinting">
         <div class="questionnaire-container__avatar-img-container">
-          <img src="assets/images/avatar.jpeg" alt="" class="questionnaire-container__avatar-img">
+          <img alt="" class="questionnaire-container__avatar-img">
         </div>
         <div class="print__message-container">
           <div class="lds-ellipsis message">
@@ -63,33 +77,10 @@
           </div>
         </div>
       </div>
-<!--      <div class="questionnaire-container__list-item">-->
-<!--        <div class="questionnaire-container__audio-type-row">-->
-<!--          <div class="questionnaire-container__avatar-img-container">-->
-<!--            <img src="assets/images/avatar.jpeg" alt="" class="questionnaire-container__avatar-img">-->
-<!--          </div>-->
-<!--          <div plyr plyrType="audio" [plyrPlaysInline]="true" [plyrCrossOrigin]="true"-->
-<!--               [plyrSources]="audioSources" class="questionnaire-container__audio has-avatar"></div>-->
-<!--        </div>-->
-
-<!--      </div>-->
-<!--      <div class="questionnaire-container__list-item">-->
-<!--        <div class="questionnaire-container__text-type-row">-->
-<!--          <div class="questionnaire-container__avatar-img-container">-->
-<!--            <img src="assets/images/avatar.jpeg" alt="" class="questionnaire-container__avatar-img">-->
-<!--          </div>-->
-<!--          <div class="questionnaire-container__text-type-container">-->
-<!--            <div class="left-arrow"></div>-->
-<!--            <div class="questionnaire-container__text-type-content">-->
-<!--              <p>Привет, меня зовут МАКС. Я буду помогать тебе. У меня для тебя есть предложение, но сначала давай знакомиться.</p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--      </div>-->
 
       <div class="answers" *ngIf="currentAnswerButtons.length > 0">
-        <button class="answers__btn" *ngFor="let answerBtnObj of currentAnswerButtons" (click)="loadData(answerBtnObj.relatedId)">
+        <button class="answers__btn" *ngFor="let answerBtnObj of currentAnswerButtons"
+                (click)="loadData(answerBtnObj.relatedId, answerBtnObj.src)">
           <p>{{answerBtnObj.src}}</p>
         </button>
       </div>

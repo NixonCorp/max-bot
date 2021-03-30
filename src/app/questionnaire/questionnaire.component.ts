@@ -33,7 +33,7 @@ export class QuestionnaireComponent implements OnInit {
             type: 'audio/mp3',
           }
         ],
-        avatar: true
+        avatar: false
       },
       {
         id: 0,
@@ -93,7 +93,14 @@ export class QuestionnaireComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  async loadData(id: number) {
+  async loadData(id: number, userAnswerStr: string = null) {
+    if (userAnswerStr) {
+      const userAnswer = {
+        type: 'userAnswer',
+        src: userAnswerStr
+      };
+      this.currentQuestionnaireList.push(userAnswer);
+    }
     this.currentAnswerButtons = [];
     this.isPrinting = true;
     await this.delay(1000);

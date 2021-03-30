@@ -1,5 +1,7 @@
+@import "src/styles";
+
 .start-page-container{
-  background-image: url('/assets/images/home_screen.jpeg');
+  background-image: url($assets_url + 'home_screen.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

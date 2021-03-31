@@ -2,6 +2,7 @@ import {Component, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/co
 import {PlyrComponent} from 'ngx-plyr';
 import {Subscription} from 'rxjs';
 import {NavigationStart, Router} from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -10,6 +11,17 @@ import {NavigationStart, Router} from '@angular/router';
   styleUrls: ['./questionnaire.component.scss']
 })
 export class QuestionnaireComponent implements OnInit {
+  profileForm = new FormGroup({
+    firstNameAndMiddleName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    mobilePhone: new FormControl('', Validators.required),
+    birthDate: new FormControl('', Validators.required),
+    citizenship: new FormControl('', Validators.required),
+    country: new FormControl('', Validators.required),
+    city: new FormControl('', Validators.required),
+    purpose: new FormControl('', Validators.required),
+  });
   isPrinting = true;
   @ViewChild(PlyrComponent)
   plyr: PlyrComponent;

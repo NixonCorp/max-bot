@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-$assets_url: '/assets/images/';
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+$assets_url: '../assets/images/';
+
+
 
 body {
   margin: 0;
@@ -32,7 +36,35 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   margin-bottom: 12px;
   font-weight: 900;
 }
+.mat-button, .mat-raised-button{
+  background-color:rgb(101, 162, 220);
+}
+.mat-calendar-body-selected{
+  background-color: rgb(101, 162, 220);
+}
+.mat-form-field.mat-focused .mat-form-field-label{
+  color: rgb(101, 162, 220);
+}
 
+.mat-checkbox-checked {
+  &.mat-accent .mat-checkbox-background {
+    background-color: rgb(101, 162, 220);
+  }
+}
+
+.mat-checkbox-layout{
+  white-space: pre-line !important;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick{
+  color: rgb(101, 162, 220);
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: rgb(101, 162, 220);
+}
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical), .cdk-keyboard-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical), .cdk-program-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
+background-color: rgba(101, 162, 220, .3);
+}
 button{
   cursor: pointer;
   line-height: normal;

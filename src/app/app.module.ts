@@ -13,6 +13,13 @@ import {MatInputModule} from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -24,10 +31,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
     PlyrModule,
+    MatButtonModule,
     MatCardModule,
+    HttpClientModule,
     MatInputModule,
+    MatIconModule,
+    MatDialogModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    MatCheckboxModule,
     MatFormFieldModule,
     FlexLayoutModule,
     RouterModule.forRoot([
@@ -35,8 +47,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {path: 'home', component: HomeComponent},
       {path: 'questionnaire', component: QuestionnaireComponent}
     ], {relativeLinkResolution: 'legacy'}),
+    ReactiveFormsModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

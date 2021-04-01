@@ -1,0 +1,232 @@
+{
+  "questionnaire": {
+    "botToken": "1662243566:AAFu7gb27m9F3xB9kZgISelootF9ln90Paw",
+    "groupIds": "-590410939,-505953099",
+    "owner":  "Иванов Иван Иванович",
+    "errorDialogImgSrc": "",
+    "errorDialogMessage": "",
+    "errorMessageDialogTitle": "Ошибка при отправке сообщения",
+    "successMessageDialogTitle": "Сообщение об отправке",
+    "successDialogImgSrc": "",
+    "successDialogMessage": "Данные успешно отправлены в группы",
+    "questionnaireList": [
+      {
+        "id": 0,
+        "type": "image",
+        "src": "assets/images/start_video.gif",
+        "style": "height: 30%; width: 30%;",
+        "avatar": false
+      },
+      {
+        "id": 0,
+        "type": "audio",
+        "src": [
+          {
+            "src": "assets/audio/botmax_hello.m4a",
+            "type": "audio/mp3"
+          }
+        ],
+        "avatar": true
+      },
+      {
+        "id": 0,
+        "type": "video",
+        "src": [
+          {
+            "src": "bTqVqk7FSmY",
+            "provider": "youtube"
+          }
+        ],
+        "avatar": true
+      },
+      {
+        "id": 0,
+        "type": "text",
+        "src": [
+          "Привет, меня зовут МАКС. Я буду помогать тебе. У меня для тебя есть предложение, но сначала давай знакомиться."
+        ],
+        "avatar": true
+      },
+      {
+        "id": 0,
+        "type": "text",
+        "src": [
+          "Тебе есть 18 лет?"
+        ],
+        "avatar": true
+      },
+      {
+        "id": 901,
+        "type": "text",
+        "src": [
+          "Извини <span class=\"ql-emojiblot\" style=\"\ndisplay: none;\n\">&#65279;<span><span class=\"ap ap-pray\">?</span></span>&#65279;</span>&#65279;, у меня деловое предложение ТОЛЬКО для тех, кому 18 лет или старше.",
+          "<br>",
+          "Но ты можешь воспользоваться нашим предложением в будущем, либо дать возможность своим более взрослым родственникам или друзьям.",
+          "<br>",
+          "А пока можешь продолжить и проявить интерес к новой теме <span class=\"ql-emojiblot\">&#65279;<span><span class=\"ap ap-nerd_face\">?</span></span>&#65279;</span>"
+        ],
+        "avatar": true
+      },
+      {
+        "id": 2,
+        "type": "text",
+        "src": [
+          "Как ты думаешь, что тебе ждет в будущем?"
+        ],
+        "avatar": true
+      },
+
+	  {
+        "id": 3,
+        "type": "text",
+        "src": [
+          "А чем ты занимаешься?"
+        ],
+        "avatar": true
+      },
+	  {
+        "id": 101,
+        "type": "text",
+        "src": [
+          "Знаешь, а я сильно переживаю за тебя, ты в курсе, что ты в группе риска?"
+        ],
+        "avatar": true
+      },
+	  {
+        "id": 101,
+        "type": "image",
+        "src": "assets/images/photo_2020-08-15_10-37-19.jpg",
+        "style": "height: 30%; width: 30%;",
+        "avatar": false
+      },
+      {
+        "id": 102,
+        "type": "text",
+        "src": [
+		  "Ну как же!",
+		   "<br />",
+		   "<span class=\"ql-emojiblot\" style=\"\ndisplay: none;\n\">&#65279;<span><span class=\"ap ap-stopwatch\">?</span></span>&#65279;</span> Твое время принадлежит не тебе и твоей семье, а твоему хозяину!",
+		   "<br />",
+		   "<span class=\"ql-emojiblot\" style=\"\ndisplay: none;\n\">&#65279;<span><span class=\"ap ap-pill\">?</span></span>&#65279;</span>",
+		   "Нервотрёпка на работе",
+		   "<br />",
+		   "<span class=\"ql-emojiblot\" style=\"\ndisplay: none;\n\">&#65279;<span><span class=\"ap ap-rage\">?</span></span>&#65279;</span>",
+		   "Начальник постоянно давит и может в любой момент сменить тебя на кого то другого <span class=\"ql-emojiblot\" style=\"\ndisplay: none;\n\">&#65279;<span><span class=\"ap ap-scream\">?</span></span>&#65279;</span>",
+		   "Не забывай о риске сокращения и мизерной пенсии, которая тебя ждет.",
+		   "<br />",
+		   "Ты согласишься с этим?"
+        ],
+        "avatar": true
+      },
+	  {
+        "id": 102,
+        "type": "text",
+        "src": [
+          "Ну как же! Твое время принадлежит не тебе и твоей семье, а твоему хозяину! Нервотрёпка на работе Начальник постоянно давит и может в любой момент сменить тебя на кого то другого Не забывай о риске сокращения и мизерной пенсии, которая тебя ждет.<br>Ты согласишься с этим?"
+        ],
+        "avatar": true
+      },
+	  {
+        "id": 103,
+        "type": "text",
+        "src": [
+          "А ты знаешь, что прямо сейчас большое количество людей работают на дому через интернет и получают официальный доход",
+		  "<span class=\"ql-emojiblot\" style=\"\ndisplay: none;\n\">&#65279;<span><span class=\"ap ap-moneybag\">?</span></span>&#65279;</span> <span class=\"ql-emojiblot\" style=\"\ndisplay: none;\n\">&#65279;<span><span class=\"ap ap-moneybag\">?</span></span>&#65279;</span>",
+		  "<span class=\"ql-emojiblot\" style=\"\ndisplay: none;\n\">&#65279;<span><span class=\"ap ap-moneybag\">?</span></span>&#65279;</span>, сопоставимый с тем, что ты получаешь на своей работе и даже намного больше.",
+		  "<br />",
+		  "С каждым днем их число растет и это закономерно!"
+        ],
+        "avatar": true
+      },
+      {
+        "id": 999,
+        "type": "form"
+      }
+    ],
+    "answers": [
+      {
+        "id": 0,
+        "buttons": [
+          {
+            "relatedId": 2,
+            "src": "Да"
+          },
+          {
+            "relatedId": 901,
+            "src": "Нет, мне меньше 18 лет"
+          }
+        ]
+      },
+	 {
+        "id": 901,
+        "buttons": [
+          {
+            "relatedId": 2,
+            "src": "Вперед"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "buttons": [
+          {
+            "relatedId": 3,
+            "src": "Верю в свое будущее. Будет только лучше."
+          },
+          {
+            "relatedId": 3,
+            "src": "Все будет намного сложнее, чем сегодня"
+          }
+        ]
+      },
+	  {
+        "id": 3,
+        "buttons": [
+          {
+            "relatedId": 101,
+            "src": "Я наемный работник"
+          },
+          {
+            "relatedId": 999,
+            "src": "Я в сетевом"
+          },
+          {
+            "relatedId": 999,
+            "src": "Я на пенсии"
+          },
+          {
+            "relatedId": 999,
+            "src": "Как раз думаю чем заняться"
+          }
+        ]
+      },
+	  {
+        "id": 101,
+        "buttons": [
+          {
+            "relatedId": 102,
+            "src": "Да неужели?"
+          },
+          {
+            "relatedId": 102,
+            "src": "Ты о чем?"
+          }
+        ]
+      },
+	  {
+        "id": 102,
+        "buttons": [
+          {
+            "relatedId": 103,
+            "src": "Да"
+          },
+          {
+            "relatedId": 999,
+            "src": "Нет"
+          }
+        ]
+      }
+
+    ]
+  }
+}

@@ -17,7 +17,7 @@
         </div>
 
                 <div class="questionnaire-container__audio-type-row" *ngIf="!questionItem.avatar && questionItem.type === 'audio'">
-                  <div plyr plyrType="audio" [plyrPlaysInline]="true" (plyrEnded)="plyrEnded()" (plyrReady)="plyrReady()"
+                  <div plyr plyrType="audio" [plyrPlaysInline]="true" (plyrEnded)="plyrEnded()" [plyrOptions]="questionItem.mediaOptions"
                        [plyrSources]="questionItem.src" class="questionnaire-container__audio"></div>
                 </div>
 
@@ -27,12 +27,12 @@
             <img alt="" class="questionnaire-container__avatar-img">
           </div>
           <div plyr plyrType="audio" [plyrPlaysInline]="true"
-               [plyrSources]="questionItem.src" (plyrEnded)="plyrEnded()" (plyrReady)="plyrReady()"
+               [plyrSources]="questionItem.src" (plyrEnded)="plyrEnded()" [plyrOptions]="questionItem.mediaOptions"
                class="questionnaire-container__audio has-avatar"></div>
         </div>
 
         <div class="questionnaire-container__video-type-row" *ngIf="!questionItem.avatar && questionItem.type === 'video'">
-          <div plyr plyrType="video" [plyrPlaysInline]="true" (plyrEnded)="plyrEnded()" (plyrReady)="plyrReady()"
+          <div plyr plyrType="video" [plyrPlaysInline]="true" (plyrEnded)="plyrEnded()" [plyrOptions]="questionItem.mediaOptions"
                [plyrSources]="questionItem.src" class="questionnaire-container__video"></div>
         </div>
 
@@ -42,7 +42,7 @@
             <img alt="" class="questionnaire-container__avatar-img">
           </div>
           <div plyr plyrType="video" [plyrPlaysInline]="true"
-               [plyrSources]="questionItem.src" (plyrEnded)="plyrEnded()" (plyrReady)="plyrReady()"
+               [plyrSources]="questionItem.src" (plyrEnded)="plyrEnded()" [plyrOptions]="questionItem.mediaOptions"
                class="questionnaire-container__video has-avatar"></div>
         </div>
 

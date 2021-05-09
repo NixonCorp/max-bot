@@ -8,6 +8,7 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/
 import {MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter} from '@angular/material-moment-adapter';
 import * as _moment from 'moment';
 import {MatDialog} from '@angular/material/dialog';
+import * as Plyr from 'plyr';
 
 const moment = _moment;
 
@@ -69,6 +70,12 @@ export class QuestionnaireComponent implements OnInit {
   currentAnswerButtons = [];
   questionnaire: any = {};
   policyChecked = false;
+  audioOptions: Plyr.Options = {
+    autoplay: false
+  };
+  videoOptions: Plyr.Options = {
+    autoplay: false
+  };
 
   constructor(private configService: ConfigService,
               private dateAdapter: DateAdapter<Date>,
@@ -108,10 +115,12 @@ export class QuestionnaireComponent implements OnInit {
     await this.delay(1000);
     let filteredQuestionnaireList = this.questionnaire.questionnaireList.filter(x => x.id === id);
     if (filteredQuestionnaireList.length > 0 &&
-      filteredQuestionnaireList[0].type === 'form') {
-      this.isPrinting = false;
+      filteredQuestionnaireList.find(x => x.type === 'form')) {
       this.formIsShown = true;
-      return;
+      if (filteredQuestionnaireList.length === 1) {
+        this.isPrinting = false;
+        return;
+      }
     }
     this.currentQuestionnaireList.push(filteredQuestionnaireList[0]);
     if (filteredQuestionnaireList.length > 1) {
@@ -123,6 +132,12 @@ export class QuestionnaireComponent implements OnInit {
           this.isPrinting = false;
           this.currentQuestionnaireList.push(question);
         } else {
+          if (question.type === 'audio' ||
+            question.type === 'video') {
+            question.mediaOptions = {
+              autoplay: question.autoplay ? true : false
+            };
+          }
           await this.delay(1000);
           this.isPrinting = false;
           this.currentQuestionnaireList.push(question);
@@ -132,9 +147,12 @@ export class QuestionnaireComponent implements OnInit {
       this.isPrinting = false;
     }
 
-    this.currentAnswerButtons = this.questionnaire.answers.find(x => x.id === id).buttons;
+    this.currentAnswerButtons = this.questionnaire.answers.find(x => x.id === id) ? this.questionnaire.answers.find(x => x.id === id).buttons : [];
     setTimeout(() => {
-      document.getElementsByClassName('answers')[0].scrollIntoView();
+      if (document.getElementsByClassName('answers') && document.getElementsByClassName('answers').length > 0) {
+        document.getElementsByClassName('answers')[document.getElementsByClassName('answers').length - 1].scrollIntoView();
+      }
+
     }, 10);
   }
 

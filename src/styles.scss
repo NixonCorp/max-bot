@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-$assets_url: '/assets/images/';
 
+$assets_url: '/MaxBot/assets/images/';
 
 
 body {
@@ -15,6 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
 }
+
 html {
   box-sizing: border-box;
   line-height: 1.4;
@@ -26,23 +27,28 @@ html {
   //--plyr-audio-controls-background: #ffffff;
   //--user-background: #65a2dc;
 }
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
 }
-.text{
+
+.text {
   margin-bottom: 12px;
   font-weight: 900;
 }
-.mat-button, .mat-raised-button{
-  background-color:rgb(101, 162, 220);
-}
-.mat-calendar-body-selected{
+
+.mat-button, .mat-raised-button {
   background-color: rgb(101, 162, 220);
 }
-.mat-form-field.mat-focused .mat-form-field-label{
+
+.mat-calendar-body-selected {
+  background-color: rgb(101, 162, 220);
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
   color: rgb(101, 162, 220);
 }
 
@@ -52,20 +58,23 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   }
 }
 
-.mat-checkbox-layout{
+.mat-checkbox-layout {
   white-space: pre-line !important;
 }
 
-.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick{
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
   color: rgb(101, 162, 220);
 }
+
 .mat-form-field-appearance-outline .mat-form-field-outline {
   color: rgb(101, 162, 220);
 }
-.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical), .cdk-keyboard-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical), .cdk-program-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
-background-color: rgba(101, 162, 220, .3);
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical), .cdk-keyboard-focused .mat-calendar-body-active > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical), .cdk-program-focused .mat-calendar-body-active > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background-color: rgba(101, 162, 220, .3);
 }
-button{
+
+button {
   cursor: pointer;
   line-height: normal;
   outline: 0;
@@ -73,11 +82,13 @@ button{
   font-size: 100%;
   margin: 0;
 }
-img{
+
+img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
 }
+
 @media(min-width: 480px) {
   .plyr__captions {
     font-size: 15px;
@@ -94,8 +105,8 @@ img{
   }
 }
 
-@media (max-width:calc(768px - 1)) {
-  .plyr__time+.plyr__time {
+@media (max-width: calc(768px - 1)) {
+  .plyr__time + .plyr__time {
     display: none;
   }
 }
@@ -108,6 +119,7 @@ img{
     padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5);
   }
 }
+
 @media screen and(max-width: 1280px) {
   html {
     font-size: 16px;
@@ -125,10 +137,14 @@ img{
     font-size: 14px;
   }
 }
+
 .ql-emojiblot {
-        display: contents !important
-      }
-.ql-emojiblot{vertical-align:text-top}
+  display: contents !important
+}
+
+.ql-emojiblot {
+  vertical-align: text-top
+}
 
 .ap {
   background-image: url($assets_url + 'spritekit.png');

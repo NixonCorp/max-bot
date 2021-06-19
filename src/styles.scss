@@ -74,6 +74,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   background-color: rgba(101, 162, 220, .3);
 }
 
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #2C76C1;
+}
+
 button {
   cursor: pointer;
   line-height: normal;

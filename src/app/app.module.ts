@@ -19,6 +19,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDatepickerModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    MatProgressSpinnerModule,
     FlexLayoutModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent, pathMatch: 'full'},

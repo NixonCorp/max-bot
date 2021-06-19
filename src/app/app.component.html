@@ -1,1 +1,5 @@
-<router-outlet></router-outlet>
+<div class="loadingSpinner" *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
+</div>
+
+<router-outlet *ngIf="!isLoading"></router-outlet>
